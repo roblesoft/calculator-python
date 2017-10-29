@@ -1,0 +1,12 @@
+from utilstools import gen
+
+def groupingSings(string):
+    for i in gen(0, len(string) - 1):
+        if string[i] == '(':
+            for j in gen(i, len(string) -1):
+                if string[j] == ')':
+                    new_string = string[i:j]
+                    new_string = calculator(new_string)
+                    string = string.replace(string[i:j], new_string)
+    return string
+
