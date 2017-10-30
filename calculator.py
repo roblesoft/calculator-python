@@ -7,6 +7,7 @@ import os
 
 def main():
     os.system('color F0')
+    print("hola")
     os.system('title CALC 1.4.5')
     while True:
         os.system('cls')
